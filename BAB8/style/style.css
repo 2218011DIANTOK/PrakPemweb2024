@@ -1,0 +1,301 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('../image/58385410-gedung-pemkab.lg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.text-box p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.navbar .logo img {
+    width: 150px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 200px;
+    left: 0;
+    top: calc(100% + 10px); /* Ubah jarak vertikal dari submenu */
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.dropdown .submenu li {
+    padding: 10px;
+}
+
+.dropdown .submenu li a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown .submenu li:hover {
+    background-color: #f4f4f4;
+}
+
+/* Services Section Styles */
+.services {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.services p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.course-col {
+    flex: 1 1 30%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.course-col h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.course-col p {
+    font-size: 1rem;
+}
+
+/* About Us Section Styles */
+.about-us {
+    background-color: #007bff;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.icons .bx {
+    font-size: 2rem;
+    margin: 0 15px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .text-box h1 {
+        font-size: 2rem;
+    }
+
+    .text-box p {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        padding: 20px 50px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+        display: block;
+    }
+
+    .dropdown .submenu {
+        position: absolute;
+        min-width: auto;
+        display: none;
+        text-align: left;
+        background-color: transparent;
+        box-shadow: none;
+        left: 0;
+        top: 100%; /* Ubah posisi submenu saat layar kecil */
+    }
+
+    .dropdown:hover .submenu {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .course-col {
+        flex: 1 1 45%;
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    display: flex;
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto;
+    width: 100%;
+    display: none;
+  }
+  
+  .carousel-item:first-child {
+    display: block;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .carousel-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
